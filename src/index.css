@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: modal-box;
+
+  /* blw prpty imp - buttons appear of less width than input flds */
+  -moz-box-sizing: border-box;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+.light {
+  background-color: white;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 20px 50px;
+  box-shadow: 7px 0px 7px 1.5px #17a471;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header li a {
+  text-decoration: none;
+  /* color: #0fe7d5; */
+  color: #34d399;
+  transition: all 0.3s ease 0s;
+}
+header li a:hover {
+  color: #07736a;
+  /* color: #10b981; */
+}
+
+header li select {
+  min-width: 100px;
+  /* background-color: white;
+  border: none;
+  font-size: medium; */
+  margin-left: 0.2em;
+  border: 0 none;
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+}
+
+header li label {
+  /* border: 1px solid red; */
+  min-width: 130px;
+  padding: 0.1em 0.2em 0.2em 0.4em;
+  background-color: #c1efdc;
+  color: #3e469e;
+  font: bold 1em sans-serif;
+  border-radius: 5px;
+}
+
+.textFlow {
+  direction: rtl;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px;
+  box-shadow: 7px 0px 7px 1.5px #17a471;
+}
+
+footer li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 3rem;
+  padding: 0 10px;
+}

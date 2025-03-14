@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.para ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.para ol li {
+  display: block;
+}
+
+/*Heading font*/
+.para ol li {
+  font: 18px Open Sans, sans-serif;
+  line-height: 32px;
+  padding-left: 60px;
+  color: #000;
+  position: relative;
+}
+
+/*paragraph font*/
+.para li p {
+  font: 14px Open Sans, sans-serif;
+  line-height: 20px;
+  color: #555;
+}
+
+/*width and style of list*/
+.para ol {
+  max-width: 500px; /*remove if full width*/
+  text-align: justify;
+}
+
+/*generic alignment*/
+.para ol li {
+  text-indent: 0 !important;
+  padding-left: 20px !important;
+  list-style-position: outside;
+  margin-left: 20px;
+  list-style-type: number;
+}
+
+.para ol li {
+  text-indent: 0 !important;
+  padding-left: 20px !important;
+  list-style-position: outside;
+  margin-left: 20px;
+  padding-bottom: 30px;
+}
+
+.para ol {
+  margin-left: 20px;
+}
+
+/* .para p {
+  display: block;
+} */

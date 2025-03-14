@@ -1,0 +1,34 @@
+.body-l {
+  z-index: 0;
+  position: relative;
+  margin-left: 5rem;
+  top: 0;
+  transition: all 0.5s ease;
+  padding: 3rem;
+  height: calc(100vh - 110px);
+}
+
+.body-trimmed-l {
+  width: calc(100% - 16.5625rem);
+  margin-left: 16.5625rem;
+}
+
+.body-r {
+  z-index: 0;
+  position: relative;
+  margin-right: 5rem;
+  top: 0;
+  transition: all 0.5s ease;
+  padding: 3rem;
+  height: calc(100vh - 110px);
+}
+
+.body-trimmed-r {
+  width: calc(100% - 16.5625rem);
+  margin-right: 16.5625rem;
+}
+
+.body-md-screen {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+}
