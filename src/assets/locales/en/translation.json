@@ -10,5 +10,9 @@
   "cancel": "Cancel",
   "proinfo": "Product Information",
   "prolis": "Product Listing",
-  "cp": "All rights reserved 2025 ©."
+  "cp": "All rights reserved 2025 ©.",
+  "recupd": "Record Updated",
+  "entname": "Please enter Name",
+  "entdes": "Please enter Description",
+  "enturl": "Please enter URL"
 }

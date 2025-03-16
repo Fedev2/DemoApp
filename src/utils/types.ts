@@ -5,14 +5,11 @@ export interface Product {
   url: string;
 }
 
+export interface ErrorRow {
+  error?: string;
+  errorField?: string;
+}
+
 export interface IconProps extends React.SVGAttributes<HTMLOrSVGElement> {
   size?: number;
 }
-
-// export interface IconProps2 extends React.SVGAttributes<SVGElement> {
-//   children?: React.ReactNode;
-//   size?: string | number;
-//   color?: string;
-//   title?: string;
-//   onClick?: React.ReactNode;
-// }

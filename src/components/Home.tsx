@@ -36,7 +36,7 @@ const Home: React.FC = () => {
               This is very basic Demo App developed in React using TypeScript.
               Its functionality can be extended and there is scope of
               improvement in the present implementaion which I did in limited
-              time frame.
+              time frame. The Arabic translation is taken from Google.
             </p>
           </li>
         </ol>

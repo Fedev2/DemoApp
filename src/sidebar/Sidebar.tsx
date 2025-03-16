@@ -67,7 +67,6 @@ const Sidebar = ({
               <i
                 className={classNames({
                   "sidenav-link-icon": true,
-                  // [item.icon]: true,
                 })}
               >
                 {item.icon}

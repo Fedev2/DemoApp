@@ -7,7 +7,7 @@
 .text-h {
   margin-top: 5rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.12rem;
   line-height: 1.5rem;
   color: rgb(235, 116, 116);
   font-weight: 700;
@@ -25,7 +25,7 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   color: rgb(235, 116, 116);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.75rem;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .text-d {
-  color: #fff;
+  color: #7764e3;
   display: inline-block;
   font-size: 14px;
   line-height: 2rem;

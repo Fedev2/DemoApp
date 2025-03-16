@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState, useContext, ChangeEvent } from "react";
+import { Fragment, useEffect, useState, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
@@ -9,32 +9,21 @@ import AddProduct from "./components/AddProduct";
 import classNames from "classnames";
 import { AppContext } from "./context/AppContext";
 import Sidebar from "./sidebar/Sidebar";
-import { Bulb } from "./icons";
 import "./index.css";
+import Header from "./components/Header";
 
 const App = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const { i18n, t } = useTranslation();
-  const i18nLanguage = i18n.language;
-  const [lang, setLang] = useState<String>(i18nLanguage);
+  const { t } = useTranslation();
   const { ready } = useTranslation();
 
-  const [{ isDark }, toggleTheme] = useContext(AppContext);
-
-  const changeTheme = () => {
-    toggleTheme(isDark);
-  };
-
-  const changeLanguage = (event: ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(event.target.value);
-    setLang(event.target.value);
-  };
+  const [{ theme, language }] = useContext(AppContext);
 
   const classes = classNames({
-    dark: isDark,
-    light: !isDark,
-    textFlow: i18n.language === "ar",
+    dark: theme === "dark",
+    light: theme === "light",
+    textFlow: language === "ar",
   });
 
   useEffect(() => {
@@ -53,27 +42,7 @@ const App = () => {
     return (
       <Fragment>
         <div className={classes}>
-          <header>
-            <li>
-              <label>
-                &#127760;
-                <select
-                  onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-                    changeLanguage(e)
-                  }
-                >
-                  <option value="en">{t("en")}</option>
-                  <option value="ar">{t("ar")}</option>
-                </select>
-              </label>
-            </li>
-            <li>
-              <a onClick={changeTheme}>
-                <Bulb />
-              </a>
-            </li>
-          </header>
-
+          <Header />
           <Sidebar
             isSidebarCollapsed={isSidebarCollapsed}
             changeIsSidebarCollapsed={(value) => setIsSidebarCollapsed(value)}

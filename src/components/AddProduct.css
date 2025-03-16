@@ -12,7 +12,7 @@ label {
   line-height: 1rem;
   font-weight: 700;
   letter-spacing: 0.025em;
-  color: #aaaa;
+  color: #777;
 }
 
 input {
@@ -68,5 +68,17 @@ input:focus {
 }
 
 .link {
-  color: #aaaa;
+  color: #777;
+  font-weight: 600;
+}
+
+.error {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ff6774;
+}
+.success {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #78e6b7;
 }

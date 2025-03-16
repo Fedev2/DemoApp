@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { AppContext, AppReducer } from "./AppContext";
 import { Product } from "../utils/types";
@@ -8,22 +8,26 @@ interface ChildrenProps {
 }
 
 const AppState: React.FC<ChildrenProps> = ({ children }) => {
-  const [isDark, setIsDark] = useState<Boolean>(false);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
-
   const [state, dispatch] = useReducer(AppReducer, {
     products: [
       {
         id: uuidv4(),
         name: "SmartPhone",
         description: "An Apple Iphone 15",
-        url: "https://anyvalidurl.example.com",
+        url: "http://anyvalidurl.example.com",
       },
     ],
+    theme: "dark",
+    language: "en",
   });
+
+  const changeTheme = (theme: string) => {
+    dispatch({ type: "TOGGLE_THEME", payload: theme });
+  };
+
+  const changeLanguage = (language: string) => {
+    dispatch({ type: "TOGGLE_LANGUAGE", payload: language });
+  };
 
   const addProduct = (product: Product) => {
     dispatch({ type: "ADD_PRODUCT", payload: product });
@@ -38,12 +42,14 @@ const AppState: React.FC<ChildrenProps> = ({ children }) => {
       value={[
         {
           products: state.products,
-          isDark,
+          theme: state.theme,
+          language: state.language,
           addProduct,
           editProduct,
           removeProduct,
         },
-        toggleTheme,
+        changeTheme,
+        changeLanguage,
       ]}
     >
       {children}

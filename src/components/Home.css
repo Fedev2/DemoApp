@@ -20,7 +20,7 @@
   font: 18px Open Sans, sans-serif;
   line-height: 32px;
   padding-left: 60px;
-  color: #000;
+  color: #777;
   position: relative;
 }
 
@@ -28,7 +28,7 @@
 .para li p {
   font: 14px Open Sans, sans-serif;
   line-height: 20px;
-  color: #555;
+  color: #777;
 }
 
 /*width and style of list*/

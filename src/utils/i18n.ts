@@ -17,8 +17,8 @@ i18n
       escapeValue: false,
     },
     resources: {
-      ar: { translation: ar },
       en: { translation: en },
+      ar: { translation: ar },
     },
     backend: {
       loadPath: "../assets/locales/{{lng}}/{{ns}}.json",
